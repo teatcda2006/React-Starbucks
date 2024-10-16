@@ -1,9 +1,9 @@
-import Comp1 from "../right_side/Component1";
-import Comp2 from "../right_side/Component2";
-import Comp3 from "../right_side/Component3";
-import Comp4 from "../right_side/Component4";
-import Comp5 from "../right_side/Component5";
-import Comp6 from "../right_side/Component6";
+import Comp1 from "./Component1";
+import Comp2 from "./Component2";
+import Comp3 from "./Component3";
+import Comp4 from "./Component4";
+import Comp5 from "./Component5";
+import Comp6 from "./Component6";
 
 const RightPanel = () => {
   return (

@@ -1,8 +1,7 @@
 import React from "react";
-import './App.css';
 import Header from './components/header/Header'
-import RightPanel from "./components/left_side/RightPanel";
-import LeftPanel from "./components/right_side/LeftPanel";
+import RightPanel from "./components/right_side/RightPanel";
+import LeftPanel from "./components/left_side/LeftPanel";
 
 const App = () => {
   return (
