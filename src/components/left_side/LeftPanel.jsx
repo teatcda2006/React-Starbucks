@@ -22,8 +22,8 @@ const LeftPanel = () => {
             before:opacity-75">
       </div>
       <div className="flex gap-5 fixed text-white bottom-10 left-[9rem] text-sm font-bold">
-        <button className="px-4 py-1 border rounded-full">Заказать сейчас</button>
-        <button className="px-4 py-1 border rounded-full">Кофейни рядом</button>
+        <button className="px-4 py-1 border rounded-full duration-500 hover:bg-[#fff2] hover:duration-500">Заказать сейчас</button>
+        <button className="px-4 py-1 border rounded-full duration-500 hover:bg-[#fff2] hover:duration-500">Кофейни рядом</button>
       </div>
     </div>
   );

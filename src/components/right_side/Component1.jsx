@@ -5,7 +5,7 @@ const Comp1 = ({ image, title, desc }) => {
       <div className="block w-[29rem]">
         <h3 className="pb-5 text-xl font-bold">{title}</h3>
         <p className="pb-5 text-sm">{desc}</p>
-        <button className="px-4 py-1 text-sm font-bold text-green-700 border border-green-700 rounded-full">
+        <button className="px-4 py-1 text-sm font-bold text-green-700 border border-green-700 rounded-full duration-500 hover:bg-[#00cc8f2a] hover:duration-500">
           Подробнее
         </button>
       </div>

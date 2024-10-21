@@ -1,16 +1,115 @@
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import React, { useState } from 'react';
+
 const Comp6 = () => {
+
+  const [openMenu, setOpenMenu] = useState({
+    aboutUs: false,
+    contactUs: false,
+    socialResponsibility: false,
+    loyaltyProgram: false,
+  });
+
+  const toggleMenu = (menuName) => {
+    setOpenMenu((prevState) => ({
+      ...prevState,
+      [menuName]: !prevState[menuName],
+    }));
+  };
+  
   return (
     <div className="block px-20 mt-10 bg-white">
       <div>
-        <ul className="block text-2xl">
-          <li className="py-8 cursor-pointer">О нас</li>
-          <li className="py-8 cursor-pointer">Связаться с нами</li>
-          <li className="py-8 cursor-pointer">Социальная ответственность</li>
-          <li className="py-8 cursor-pointer">
-            Программа Лояльности Starbucks
+      <ul className="block text-2xl">
+        <li className="footer-menu-item">
+          <div className="flex justify-between w-[100%] py-8" onClick={() => toggleMenu('aboutUs')}>
+            <span className="heading-03">О нас</span>
+            <button>
+            <ChevronDownIcon
+                  aria-hidden="true"
+                  className="w-5 h-5 -mr-1 text-gray-400"
+                />
+            </button>
+          </div>
+          {openMenu.aboutUs && (
+            <ul className="text-sm font-bold bg-white">
+              <li>
+              <a href="#" className="block py-4 pr-4">
+                    О нас
+                  </a>
+              </li>
+              <li>
+              <a href="#" className="block py-4 pr-4">
+                    Starbucks история и новости
+                  </a>
+              </li>
+            </ul>
+          )}
+        </li>
+
+        <li className="footer-menu-item">
+          <div className="flex justify-between w-[100%] py-8" onClick={() => toggleMenu('contactUs')}>
+            <span className="heading-03">Связаться с нами</span>
+            <button>
+            <ChevronDownIcon
+                  aria-hidden="true"
+                  className="w-5 h-5 -mr-1 text-gray-400"
+                />
+            </button>
+          </div>
+          {openMenu.contactUs && (
+            <ul className="text-sm font-bold bg-white">
+              <li>
+              <a href="#" className="block py-4 pr-4">
+              Связаться с нами
+                  </a>
+              </li>
+            </ul>
+          )}
           </li>
-        </ul>
-      </div>
+          <li className="footer-menu-item">
+          <div className="flex justify-between w-[100%] py-8" onClick={() => toggleMenu('socialResponsibility')}>
+            <span className="heading-03">Социальная ответственность</span>
+            <button>
+            <ChevronDownIcon
+                  aria-hidden="true"
+                  className="w-5 h-5 -mr-1 text-gray-400"
+                />
+            </button>
+          </div>
+          {openMenu.socialResponsibility && (
+            <ul className="text-sm font-bold bg-white">
+              <li>
+              <a href="#" className="block py-4 pr-4">
+              Ответственность
+                  </a>
+              </li>
+            </ul>
+          )}
+          </li>
+          <li className="footer-menu-item">
+          <div className="flex justify-between w-[100%] py-8" onClick={() => toggleMenu('loyaltyProgram')}>
+            <span className="heading-03">Программа лояльности Starbucks</span>
+            <button>
+            <ChevronDownIcon
+                  aria-hidden="true"
+                  className="w-5 h-5 -mr-1 text-gray-400"
+                />
+            </button>
+          </div>
+          {openMenu.loyaltyProgram && (
+            <ul className="text-sm font-bold bg-white">
+              <li>
+              <a href="#" className="block py-4 pb-8 pr-4">
+              Программа лояльности Starbucks
+                  </a>
+              </li>
+            </ul>
+          )}
+        </li>
+      </ul>
+    </div>
       <hr className="border-[0.1rem] border-gray-300" />
       <div className="flex gap-4 py-10">
         <svg
