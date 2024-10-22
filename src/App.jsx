@@ -1,16 +1,15 @@
 import React from "react";
+import { BrowserRouter } from 'react-router-dom'
+import AppRouter from './routes/Routes'
 import Header from './components/header/Header'
-import RightPanel from "./components/right_side/RightPanel";
-import LeftPanel from "./components/left_side/LeftPanel";
 
 const App = () => {
   return (
     <>
-      <Header />
-      <div className="flex">
-        <LeftPanel />
-        <RightPanel />
-      </div>
+      <BrowserRouter>
+            <Header />
+            <AppRouter />
+          </BrowserRouter>
     </>
   );
 };
