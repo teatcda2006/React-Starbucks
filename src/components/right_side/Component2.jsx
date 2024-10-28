@@ -1,7 +1,7 @@
-const Comp2 = () => {
+const Comp2 = ({bg}) => {
   return (
     <div>
-      <img src={"/images/yellow_img.png"} alt="" className="pt-8" />
+      <img src={bg} alt="" className="pt-8" />
     </div>
   );
 };

@@ -13,7 +13,9 @@ function Header() {
             <NavLink to="/menu">
               <li className="cursor-pointer">МЕНЮ</li>
             </NavLink>
-            <li className="cursor-pointer">ДОСТАВКА</li>
+            <NavLink to="/delivery">
+              <li className="cursor-pointer">ДОСТАВКА</li>
+            </NavLink>
             <li className="cursor-pointer">ПРОГРАММА ЛОЯЛЬНОСТИ</li>
             <li className="cursor-pointer">
               О STARBUCKS В РЕГИОНЕ MIDDLE EAST
